@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charsert="UTF-8">
+        <title>Say Hello</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+    </head>
+    <body>
+        <img src="C:\Users\issam\button-lemon-icon.ico">
+        <br>
+        <form action="greet" method="post"
+            {% for messsage in get_flashed_messages()%}
+                <p> {{message}} </p>
+            {% endfor %}
+            <br>
+            <input type="text" name="name_input">
+            <br>
+            <input type="submit" value="GREET" id="greet"
+        </form>
+    </body>
+</html>
